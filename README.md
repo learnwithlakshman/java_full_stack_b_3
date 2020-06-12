@@ -12,3 +12,7 @@ After Cloning for getting latest updated code use command git pull
 ```bash
 git pull
 ```
+
+Interview Questions:
+
+http://jsltech.blogspot.com/2014/09/interview-preparations.html
