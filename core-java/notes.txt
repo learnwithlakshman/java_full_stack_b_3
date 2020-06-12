@@ -1,0 +1,111 @@
+JDK:
+
+
+Tutorial:
+
+https://docs.oracle.com/javase/tutorial/
+
+API DOCS:
+
+https://docs.oracle.com/javase/8/docs/api/
+
+
+https://www.oracle.com/java/technologies/javase-jdk8-downloads.html
+
+-------------------------------------------------------------------
+
+JDK
+JRE
+
+C:\Program Files\Java
+
+JDK Version:
+
+java -version
+
+javac
+java
+
+
+HelloWorld.java 
+
+public class HelloWorld{
+
+	public static void main(String args[]){
+		System.out.println("Welcome to Java world");		
+	}
+
+}
+
+javac HelloWorld.java      => HelloWorld.class
+
+java HelloWorld
+
+
+IDE:
+
+
+https://www.eclipse.org/downloads/packages/release/neon/3/eclipse-ide-java-ee-developers
+
+
+
+public static void main(String[] args) => private, default, protected and public
+
+
+java HelloWorld.main(new String[]{});
+
+
+Identifiers:
+
+	keywords:
+		
+
+Primitive Datatype:
+
+	byte
+	short
+	char
+	int 
+	float
+	long
+	double
+	boolean
+
+	if, else, for, while, do , break, continue, default
+	class,interface,extends,implements
+	try,catch,throw, throws, finally
+	public,private,protected
+
+Variables: 
+
+
+
+Format Sourcecode = Ctrl + Shift + F
+
+Comments:
+	Single-line  : //
+	Multi-line   : /* ------  */
+	Document     :/** --------*/
+
+Day-2:
+
+https://jsltech.blogspot.com/2014/09/interview-preparations.html
+
+Relational Operators:
+
+  <
+  >
+  >=
+  <=
+  ==
+  != 
+
+Ternary Operator:
+
+	(exp) ? statement1 : statement2;
+
+
+http://github.com/learnwithlakshman/batch_full_stack_3.git
+
+ 
+
