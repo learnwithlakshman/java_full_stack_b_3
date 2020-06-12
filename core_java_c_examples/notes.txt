@@ -108,4 +108,15 @@ Ternary Operator:
 http://github.com/learnwithlakshman/batch_full_stack_3.git
 
  
+Install Git bash:
+
+	https://git-scm.com/downloads
+
+Add to the environment variables: 
+
+C:\Program Files\Git\bin
+
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+
 
