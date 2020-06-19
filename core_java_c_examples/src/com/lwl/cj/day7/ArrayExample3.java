@@ -1,9 +1,13 @@
 package com.lwl.cj.day7;
 
 import java.util.Arrays;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 public class ArrayExample3 {
 	public static void main(String[] args) {
+		
+		//System.out.println(new Random().ints(1, 100).limit(20).boxed().collect(Collectors.toList()));
 		int[] arr = new int[20];
 		for (int i = 0; i < arr.length; i++) {
 			int num = (int) (Math.random() * 50);
