@@ -135,3 +135,10 @@ final:  class
 		
 		this
 		this()
+		
+		
+		IIB
+		static  => block, variables, Inner class, Methods, imports
+		
+		
+		
