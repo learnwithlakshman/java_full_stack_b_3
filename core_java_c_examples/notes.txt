@@ -140,5 +140,7 @@ final:  class
 		IIB
 		static  => block, variables, Inner class, Methods, imports
 		
-		
+static:
+
+      java One.main(new String[]{});
 		
