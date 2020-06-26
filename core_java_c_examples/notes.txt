@@ -143,4 +143,7 @@ final:  class
 static:
 
       java One.main(new String[]{});
-		
+	
+	
+overloading:
+	1. Method name must be same and should have different param list	
