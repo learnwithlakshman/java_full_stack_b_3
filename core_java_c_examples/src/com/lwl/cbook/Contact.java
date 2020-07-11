@@ -45,5 +45,10 @@ public class Contact {
 		public void setMobile(String mobile) {
 			this.mobile = mobile;
 		}
+		@Override
+		public String toString() {
+			return "Contact [cid=" + cid + ", name=" + name + ", email=" + email + ", mobile=" + mobile + "]";
+		}
+		
 		
 }

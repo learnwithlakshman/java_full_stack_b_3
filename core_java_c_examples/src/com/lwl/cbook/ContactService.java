@@ -9,4 +9,11 @@ public interface ContactService {
 		public Contact updateContact(Contact contact);
 		public Contact getContactById(int cid)throws ContactNotFoundException;
 		public Contact[] search(String str);
+		
+		default int size() {
+			if(getAllContacts()!=null) {
+				return getAllContacts().length;
+			}
+			return 0;
+		}
 }
