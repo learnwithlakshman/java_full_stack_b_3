@@ -21,7 +21,7 @@ public class MapExample {
 			map.put(i, i*i);
 		}
 		
-		list.stream().forEach(e->map.put(e, e*e));
+		list.stream().collect(Collectors.toMap(e->e, e->e*2));
 		System.out.println(map);
 		
 	}

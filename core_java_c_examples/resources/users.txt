@@ -1,0 +1,7 @@
+name,password,email,role
+Lakshman,lakshman@123,lakshman@gmail.com,USER
+Krish,krish@123,krish@gmail.com,ADMIN
+Manoj,manoj@123,manoj@gmail.com,USER
+krishna,krishna@123,krish@gmail.com,USER
+Charan,charan@123,charan@gmail.com,USER
+Rakesh,rakesh@123,rakesh@gmail.com,USER
