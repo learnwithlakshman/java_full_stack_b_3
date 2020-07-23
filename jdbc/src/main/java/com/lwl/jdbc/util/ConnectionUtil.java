@@ -26,7 +26,12 @@ public enum ConnectionUtil {
 	public Connection getConnection() {
 		Connection con = null;
 		try {
-			con = DriverManager.getConnection(properties.getProperty("url"), properties);
+			
+			String url = properties.getProperty("jdbc.local.url");
+			String username = properties.getProperty("jdbc.local.user");
+			String password = properties.getProperty("jdbc.local.password");
+			con = DriverManager.getConnection(url,username,password);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
