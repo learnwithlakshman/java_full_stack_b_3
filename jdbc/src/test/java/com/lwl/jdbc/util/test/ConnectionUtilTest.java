@@ -5,13 +5,11 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.SQLType;
 import java.sql.Statement;
 import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import com.lwl.jdbc.domain.Dept;
@@ -21,16 +19,8 @@ public class ConnectionUtilTest {
 
 	ConnectionUtil conUtil = ConnectionUtil.dbutil;
 
-	@Test
-	public void testConnection() throws SQLException {
-
-		Connection conn = conUtil.getConnection();
-		Assertions.assertNotNull(conn, "Connection object can't be null");
-		System.out.println(conn.getMetaData().getDriverName() + " " + conn.getMetaData().getDriverVersion());
-	}
-
-	@Test
-	 void testGetDeptData() {
+	// @Test
+	void testGetDeptData() {
 		final String DEPT_QUERY = "select deptno,dname,location from dept";
 
 		Connection conn = null;
@@ -61,13 +51,13 @@ public class ConnectionUtilTest {
 		}
 	}
 
-	@Test
-	 void addDeptData() {
+	// @Test
+	void addDeptData() {
 		final String ADD_DEPT = "insert into dept(deptno,dname,location) values(?,?,?)";
 
-		int deptno = 20;
-		String dname = "Bombay";
-		String location = "Development";
+		int deptno = 50;
+		String dname = "UI&UX";
+		String location = "MUMBAI";
 		Dept dept = Dept.builder().deptno(deptno).dname(dname).location(location).build();
 
 		Connection conn = null;
@@ -91,9 +81,9 @@ public class ConnectionUtilTest {
 		}
 	}
 
-	@Test
-	 void getDeptByName() {
-		final String inputdname = "Sales";
+	// @Test
+	void getDeptByName() {
+		final String inputdname = "SALES";
 
 		final String DEPT_BY_DNAME = "select deptno,dname,location from dept where dname=?";
 		Connection conn = null;
@@ -123,7 +113,7 @@ public class ConnectionUtilTest {
 	}
 
 	@Test
-	 void getTotalSalByDeptno() {
+	void getTotalSalByDeptno() {
 
 		int deptno = 10;
 		Connection conn = null;
@@ -131,7 +121,7 @@ public class ConnectionUtilTest {
 
 		try {
 			conn = conUtil.getConnection();
-			cst = conn.prepareCall("{call total_sal_of_dept(?,?,?}");
+			cst = conn.prepareCall("{call total_sal_of_dept(?,?,?)}");
 			cst.registerOutParameter(1, Types.VARCHAR);
 			cst.registerOutParameter(2, Types.FLOAT);
 			cst.setInt(3, deptno);

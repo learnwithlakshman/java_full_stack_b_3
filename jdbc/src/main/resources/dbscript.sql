@@ -39,9 +39,9 @@ INSERT INTO emp VALUES ('7900','JAMES','CLERK','7698','1981-12-03','950.00',NULL
 INSERT INTO emp VALUES ('7902','FORD','ANALYST','7566','1981-12-03','3000.00',NULL,'20');
 INSERT INTO emp VALUES ('7934','MILLER','CLERK','7782','1982-01-23','1300.00',NULL,'10');
 
-create procedure total_sal_of_dept(out dname varchar(50),out amount float,in deptno int)
-begin
-	select d.dname into dname,sum(e.sal) into amount from dept d inner join emp e on d.deptno= e.deptno where d.depto=deptno;
-end;
 
+CREATE DEFINER=`dbuser`@`%` PROCEDURE `total_sal_of_dept`(OUT deptname varchar(100),OUT amount float,IN deptno int)
+BEGIN
+	select d.dname,sum(e.sal) into deptname, amount from emp e inner join dept d on e.deptno=d.deptno;
+END
 
