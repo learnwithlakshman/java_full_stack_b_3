@@ -1,0 +1,181 @@
+{
+   "players":[
+      {
+         "_id":"5e31130a9488128e71790bed",
+         "label":"DC",
+         "player":"Shreyas Iyer (R)",
+         "price":70000000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bee",
+         "label":"DC",
+         "player":"Ajinkya Rahane (R)",
+         "price":52500000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bef",
+         "label":"DC",
+         "player":"Avesh Khan (R)",
+         "price":7000000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf0",
+         "label":"DC",
+         "player":"Keemo Paul (R)",
+         "price":5000000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf1",
+         "label":"DC",
+         "player":"Prithvi Shaw (R)",
+         "price":12000000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf2",
+         "label":"DC",
+         "player":"Shikhar Dhawan (R)",
+         "price":52000000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf3",
+         "label":"DC",
+         "player":"Shimron Heymyer",
+         "price":77500000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf4",
+         "label":"DC",
+         "player":"Jason Roy",
+         "price":15000000.0,
+         "role":"Batsman"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf5",
+         "label":"DC",
+         "player":"Rishabh Pant (R)",
+         "price":150000000.0,
+         "role":"Wicket Keeper"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf6",
+         "label":"DC",
+         "player":"Alex Carey",
+         "price":24000000.0,
+         "role":"Wicket Keeper"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf7",
+         "label":"DC",
+         "player":"Marcus Stoinis",
+         "price":48000000.0,
+         "role":"All-Rounder"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf8",
+         "label":"DC",
+         "player":"Lalit Yadav",
+         "price":2000000.0,
+         "role":"All-Rounder"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bf9",
+         "label":"DC",
+         "player":"Chris Woakes",
+         "price":15000000.0,
+         "role":"All-Rounder"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bfa",
+         "label":"DC",
+         "player":"Ravichandran Ashwin (R)",
+         "price":76000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bfb",
+         "label":"DC",
+         "player":"Sandeep Lamichhane (R)",
+         "price":2000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bfc",
+         "label":"DC",
+         "player":"Axax Patel (R)",
+         "price":50000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bfd",
+         "label":"DC",
+         "player":"Harshal Patel (R)",
+         "price":2000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bfe",
+         "label":"DC",
+         "player":"Ishant Sharma (R)",
+         "price":11000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790bff",
+         "label":"DC",
+         "player":"Kagiso Rabada (R)",
+         "price":42000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790c00",
+         "label":"DC",
+         "player":"Mohit Sharma",
+         "price":5000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790c01",
+         "label":"DC",
+         "player":"Tushar Deshpande",
+         "price":2000000.0,
+         "role":"Bowler"
+      
+},
+      {
+         "_id":"5e31130a9488128e71790c02",
+         "label":"DC",
+         "player":"Amit Mishra (R)",
+         "price":40000000.0,
+         "role":"Bowler"
+      
+}
+   
+]
+}
