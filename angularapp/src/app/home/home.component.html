@@ -1,0 +1,148 @@
+<div class="row">
+
+        <div class="col">
+            <p><strong>Angular Basics : Data Binding</strong></p>
+            <img src="../../assets/img/databinding.png">
+            <hr>
+            <p><strong>
+                Interpolation
+            </strong>
+            </p>
+            <p>{{message}}</p>
+            <p>{{"Greeting "+ message}}</p>
+            <p>{{"4 + 5  = "+ (4 + 5)}}</p>
+
+            <p><strong>
+                Property Binding
+            </strong>
+            </p>
+           
+            
+            <img [src]="imgSrc" width="100" height="100">
+            
+            <p><strong>Event Binding</strong></p>
+            
+
+            <button (click)="toggleBulb()" class="btn btn-primary">On/Off</button>
+
+            <p><strong>Two-way Binding</strong></p>
+            
+            <input type="text" [(ngModel)]="username" class="form-control">
+
+            Username :{{username}}
+            <hr>
+        </div>
+        <div class="col">
+        <p><strong>Angular Directives</strong></p> 
+        
+        <strong>Angular Directives - ngIf and ngFor</strong>
+        
+        <div *ngIf="servers.length > 0;then viewservers else noservers">
+            
+        </div>
+        
+        <ng-template #viewservers>
+            <table class="table mt-1">
+                <tr>
+                    <th>#</th>
+                    <th>IP Address</th>
+                    <th>Status</th>
+                    <th>Delete</th>
+                </tr>
+                <tr *ngFor="let server of servers;index as id">
+                    <td>{{id+1}}</td>
+                    <td>{{server.ip}}</td>
+                    <td><button  class="btn" 
+                        [ngClass]="{
+                            'btn-success':server.status==true,
+                            'btn-danger' :server.status!=true
+                        }"
+                    (click)="changeStatus(server)">{{server.status == true?"ON":"OFF"}}</button></td>
+                    <td>
+                        <button class="btn btn-info" [disabled]="server.status==true"
+                            
+                        (click)="deleteServer(server)">Delete
+
+                        </button>
+                    </td>
+                </tr>
+            </table>
+
+        </ng-template>
+        <ng-template #noservers>
+            <p>There are no servers</p>
+        </ng-template>
+        <strong>Angular Directives - ngSwitch</strong>
+        <hr>
+            Select view type: 
+                 <input type="radio" [value]="'table'"  name="viewtype"  [(ngModel)]="viewType">Table
+                 <input type="radio" [value]="'card'"  name="viewtype" [(ngModel)]="viewType">Card
+      
+         
+        <div [ngSwitch]="viewType">
+            <div *ngSwitchCase="'table'">
+                <table class="table">
+                    <tr>
+                        <th>
+                            #
+                        </th>
+                        <th>Name</th>
+                        <th>Dob</th>
+                        <th>Salary</th>
+                    </tr>
+                    <tr *ngFor="let e of employees;index as i">
+                     
+                            <td>{{i+1}}</td>
+                            <td>{{e.name | uppercase}}</td>
+                            <td>{{e.dob | date:'yyyy-MMM-d'}}</td>
+                            <td>{{e.salary|currency:'USD'}}</td>
+                     
+                   </tr>
+                </table>
+            </div>
+            <div *ngSwitchCase="'card'">
+                <div class="card mb-2" *ngFor="let e of employees">
+                    <div class="card-body">
+                      <h5 class="card-title">{{e.name | uppercase}}</h5>
+                      <p class="card-text">
+                       DOB    : {{e.dob | date:'yyyy-MMM-d'}}<br>
+                       Salary : {{e.salary|currency:'USD'}}   
+                      </p>
+                   
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <strong><p>Envent - Filter</p></strong>
+
+        <input type="text" 
+                name="search" 
+                placeholder="Enter the data to search" 
+                class="form-control" [(ngModel)]="search"  (keyup.enter)="searchEmployees()">
+
+        <div *ngIf="searchList.length > 0 && search.length > 0">
+            <table class="table">
+                <tr>
+                    <th>
+                        #
+                    </th>
+                    <th>Name</th>
+                    <th>Dob</th>
+                    <th>Salary</th>
+                </tr>
+                <tr *ngFor="let e of searchList;index as i">
+                 
+                        <td>{{i+1}}</td>
+                        <td>{{e.name | uppercase}}</td>
+                        <td>{{e.dob | date:'yyyy-MMM-d'}}</td>
+                        <td>{{e.salary|currency:'USD'}}</td>
+                 
+               </tr>
+            </table>
+
+        </div>
+
+        </div>
+        <div class="col"></div>
+
+</div>
