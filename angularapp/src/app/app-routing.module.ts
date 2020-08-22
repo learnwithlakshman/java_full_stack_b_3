@@ -13,12 +13,20 @@ const routes: Routes = [
 
   },
   {
+    path:'home',
+    component:HomeComponent
+  },
+  {
     path:'cbook',
     component:CbookComponent
   },
   {
     path:'quiz',
     component:QuizComponent
+  },
+  {
+    path:'ipl',
+    loadChildren:()=>import('./ipl/ipl.module').then(m=>m.IplModule)
   }
 
 ];

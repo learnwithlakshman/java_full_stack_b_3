@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean name="service" class="com.careerit.sc.di.GreetingService">
+		<property name="greetings" ref="greeter"></property>
+	</bean>
+	
+	
+	<!-- <bean name="greeter" class="com.careerit.sc.di.BirthdayGreeting"></bean>-->
+	<bean name="greeter" class="com.careerit.sc.di.SessionalGreetings"></bean>
+        
+</beans>

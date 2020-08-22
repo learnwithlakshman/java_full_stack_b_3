@@ -1,1 +1,49 @@
-<p>cbook works!</p>
+<div class="row mt-1">
+
+        <div class="col-md-8">
+
+                <table *ngIf="contacts.length > 0" class="table">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Mobile</th>
+                        <th>City</th>
+                        <th>Edit/Delete</th>
+                    </tr>
+                    <tr *ngFor="let c of contacts">
+                        <td>{{c.name}}</td>
+                        <td>{{c.email}}</td>
+                        <td>{{c.mobile}}</td>
+                        <td>{{c.city}}</td>
+                        <td>
+                            <button (click)="deleteContact(c.cid)" class="btn btn-primary">Delete</button>
+                            &nbsp;<button (click)="editContact(c.cid)" class="btn btn-primary">Edit</button>
+                            
+                        </td>
+                    </tr>
+                </table>
+
+        </div>
+        <div class="col-md-4">
+            <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="email" [(ngModel)]="contact.name" class="form-control" id="name" name="name"  placeholder="Enter the fullname" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" [(ngModel)]="contact.email" class="form-control" id="email" name="email"  placeholder="Enter the email">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile:</label>
+                    <input type="text" [(ngModel)]="contact.mobile" class="form-control" id="mobile" name="mobile"   placeholder="Enter the mobile" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text"  [(ngModel)]="contact.city" class="form-control" id="city" name="city"  placeholder="Enter the city">
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="!contactForm.form.valid">Submit</button>
+            </form>
+           
+        </div>
+</div>
