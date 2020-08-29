@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import com.careerit.iplstat.dao.IplstatDao;
 import com.careerit.iplstat.dao.IplstatDaoImpl;
@@ -29,20 +30,27 @@ public class IplstatServiceImpl implements IplstatService {
 
 	@Override
 	public List<PlayerDTO> getPlayersByTeam(String label) {
-		// TODO Auto-generated method stub
-		return null;
+		Assert.notNull(label, "Label name can't be empty or null");
+		List<PlayerDTO> playersList = iplstatDao.findPlayersByTeam(label);
+		log.info("Player count for the team {} is {}",label,playersList.size());
+		return playersList;
 	}
 
 	@Override
 	public List<RoleCountDTO> getPlayersCountByRole(String label) {
-		// TODO Auto-generated method stub
-		return null;
+		Assert.notNull(label, "Label name can't be empty or null");
+		List<RoleCountDTO> roleCountList = iplstatDao.findPlayersCountByRole(label);
+		log.info("Roles count {} for team {} ",roleCountList.size(),label);
+		return roleCountList;
 	}
 
 	@Override
 	public List<PlayerDTO> getPlayerByTeamAndRole(String label, String role) {
-		// TODO Auto-generated method stub
-		return null;
+		Assert.notNull(label, "Label name can't be empty or null");
+		Assert.notNull(role, "Role name can't be empty or null");
+		List<PlayerDTO> playersList = iplstatDao.findPlayerByTeamAndRole(label, role);
+		log.info("Player count for the team {} and role {} is {}",label,role,playersList.size());
+		return playersList;
 	}
 
 }
